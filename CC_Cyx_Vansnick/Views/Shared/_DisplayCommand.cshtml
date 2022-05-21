@@ -1,22 +1,39 @@
 ﻿@model CC_Cyx_Vansnick.Models.POCO.Command
 
 
-<table>
+<table style="border: 1px solid; width: 70%; margin:auto;">
     @{
+        float somme = 0;
         foreach (var item in Model.Articles)
         {
-            <tr>
-                <td>
-                        @item.Key.Name  
-                </td>
-                <td>
-                        @item.Key.Price
-                </td>
-                <td>
-                        x @item.Value
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @item.Key.Name
+            </td>
+            <td>
+                @item.Key.Price €
+            </td>
+            <td>
+                x @item.Value
+            </td>
+            
+
+            <td>
+                @{
+                    float temp = item.Key.Price * item.Value;
+                    somme += temp;
+                }
+                @temp
+
+            </td>
+        </tr>
         }
+        <tr>
+            <td>
+                Somme Total: @somme €
+            </td>
+            
+        </tr>
     }
     </table>
     

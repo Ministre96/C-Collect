@@ -122,4 +122,4 @@ C:\Users\bapti\source\repos\CC_Cyx_Vansnick\CC_Cyx_Vansnick\bin\Debug\netcoreapp
 C:\Users\bapti\source\repos\CC_Cyx_Vansnick\CC_Cyx_Vansnick\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\bapti\source\repos\CC_Cyx_Vansnick\CC_Cyx_Vansnick\obj\Debug\netcoreapp3.1\Razor\Views\ValidationCommand\Index.cshtml.g.cs
 C:\Users\bapti\source\repos\CC_Cyx_Vansnick\CC_Cyx_Vansnick\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_DisplayCommand.cshtml.g.cs
-C:\Users\bapti\source\repos\CC_Cyx_Vansnick\CC_Cyx_Vansnick\obj\Debug\netcoreapp3.1\Razor\Views\ValidationCommand\ChooseStore.cshtml.g.cs
+C:\Users\bapti\source\repos\CC_Cyx_Vansnick\CC_Cyx_Vansnick\obj\Debug\netcoreapp3.1\Razor\Views\ValidationCommand\ChooseDay.cshtml.g.cs

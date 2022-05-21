@@ -1,0 +1,14 @@
+﻿@model CC_Cyx_Vansnick.Models.ViewModel.DDLDayViewModel;
+<form method="post" asp-controller="ValidationCommand" asp-action="ChooseTimeSlot">
+
+    <table>
+        
+        <tr>
+            <td><label asp-for="Day"></label></td>
+            <td><select asp-for="Day" asp-items="Model.Days"></select></td>
+        <tr>
+            <td><input type="submit" /></td>
+
+        </tr>
+    </table>
+</form>

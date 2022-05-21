@@ -23,13 +23,22 @@ namespace CC_Cyx_Vansnick.Controllers
         public IActionResult Index()
         {
             List<Article> articles = _articlesDAL.FindAllArticles();
-            List<String> cat = new List<string>();
-            var viewModel = new DDLCatViewModel();
-            viewModel.ProductType = "Viande";
+            DDLCatViewModel dDLCatViewModel = new DDLCatViewModel("Tout");
+            //List<String> cat = new List<string>();
             ViewBag.Article = articles;
-            return View(viewModel);
+            return View(dDLCatViewModel);
         }
-
+        public IActionResult Index(DDLCatViewModel dDLCatViewModel)
+        {
+            List<Article> articles = _articlesDAL.FindAllArticles();
+            if (dDLCatViewModel.ProductType != "Tout")
+            {
+                articles = articles.FindAll(a => a.Type == dDLCatViewModel.ProductType);
+            }
+            //List<String> cat = new List<string>();
+            ViewBag.Article = articles;
+            return View(dDLCatViewModel);
+        }
         public IActionResult Privacy()
         {
             return View();

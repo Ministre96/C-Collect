@@ -39,6 +39,9 @@ namespace CC_Cyx_Vansnick
             services.AddTransient<IUsersDAL>(md => new UsersDAL(connectionString));
             services.AddTransient<IArticlesDAL>(md => new ArticlesDAL(connectionString));
             services.AddTransient<IEmployeesDAL>(md => new EmployeesDAL(connectionString));
+            services.AddTransient<IStoresDAL>(md => new StoresDAL(connectionString));
+            services.AddTransient<ICommandsDAL>(md => new CommandsDAL(connectionString));
+            services.AddTransient<ILigneCommandsDAL>(md => new LigneCommandsDAL(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

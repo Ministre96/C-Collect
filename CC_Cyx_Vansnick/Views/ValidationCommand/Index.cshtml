@@ -1,8 +1,25 @@
 ﻿@model CC_Cyx_Vansnick.Models.POCO.Command
+@using CC_Cyx_Vansnick.Models.POCO
 
 
-<h1>Summary of the command</h1>
+<h1 style="text-align:center">Summary of the command</h1>
 
 <partial name="_DisplayCommand" model=Model/>
 
-<button asp-controller="ValidationCommand" asp-action="StoreChoice">Choose your store</button>
+<table>
+     <tr>
+    <th>Adresse</th>
+    <th>Numero de Tel</th>
+     </tr>
+    @{
+        foreach (Store item in ViewBag.Store)
+        {
+        <tr>
+            <td>@item.Street @item.Number @item.City</td>
+            <td>@item.PhoneNumber</td>
+            <td><a asp-controller="ValidationCommand" asp-action="ChooseDay" asp-route-id="@item.IdStore"> √ </a></td>
+        </tr>
+        }
+
+        }
+        </table>

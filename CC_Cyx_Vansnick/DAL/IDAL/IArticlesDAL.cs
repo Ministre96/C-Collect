@@ -9,5 +9,6 @@ namespace CC_Cyx_Vansnick.DAL.IDAL
     public interface IArticlesDAL
     {
         List<Article> FindAllArticles();
+        Article FindById(int id);
     }
 }

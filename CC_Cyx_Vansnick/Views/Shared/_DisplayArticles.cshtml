@@ -1,7 +1,13 @@
 ﻿@model CC_Cyx_Vansnick.Models.POCO.Article
+@{
+    string s = "/Command/Add/" + Model.IdArticle;
 
 
-        <td colspan="3">@Model.Name </td>
+    <tr>
+        <td>@Model.Name</td>
         <td>@Model.Price €</td>
         <td>@Model.Type</td>
+        <td><a href=@s>+</a></td>
 
+    </tr>
+}

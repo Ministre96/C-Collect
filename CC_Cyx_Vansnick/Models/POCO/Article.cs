@@ -1,4 +1,5 @@
-﻿using CC_Cyx_Vansnick.DAL.IDAL;
+﻿using CC_Cyx_Vansnick.DAL;
+using CC_Cyx_Vansnick.DAL.IDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace CC_Cyx_Vansnick.Models.POCO
         private string name;
         private float price;
         private string type;
+        
 
         public string Type
         {
@@ -39,16 +41,20 @@ namespace CC_Cyx_Vansnick.Models.POCO
         }
         public Article()
         {
-
+            
         }
         public Article(string n, float p)
         {
             name = n;
             price = p;
         }
-        public List<Article> FindAllArticle(IArticlesDAL articlesDAL )
+        public static List<Article> FindAllArticle(IArticlesDAL articlesDAL )
         {
             return articlesDAL.FindAllArticles();
+        }
+        public static Article FindById(int id, IArticlesDAL articlesDAL)
+        {
+            return articlesDAL.FindById(id);
         }
     }
 }

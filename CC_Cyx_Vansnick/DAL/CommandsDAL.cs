@@ -50,7 +50,7 @@ namespace CC_Cyx_Vansnick.DAL
 
         public bool VerifyTimeSLot(int idStore, DateTime date, int maxSlot)
         {
-            string query = "SELECT COUNT * AS cpt FROM dbo.[Command] WHERE IDSTORE = @IdStore AND TIMESLOT = @Year-@Month-@Day";
+            string query = "SELECT COUNT * AS cpt FROM dbo.[Command] WHERE IDSTORE = @IdStore AND TIMESLOT LIKE '@Year-@Month-@Day%'";
             int result = 0;
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {

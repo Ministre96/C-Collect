@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CC_Cyx_Vansnick.DAL.IDAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -60,6 +61,11 @@ namespace CC_Cyx_Vansnick.Models.POCO
             street = s;
             number = n;
             city = c;
+            
+        }
+        public static List<Store> FindAllStore(IStoresDAL storesDAL)
+        {
+            return storesDAL.FindAllStore();
         }
     }
 }

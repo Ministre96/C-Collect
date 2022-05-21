@@ -87,5 +87,27 @@ namespace CC_Cyx_Vansnick.DAL
             }
             return articles;
         }
+        public Article FindById(int id)
+        {
+            Article a = new Article();
+            string query = "SELECT * FROM dbo.[Article] WHERE IdArticle = @IdArticle";
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("IdArticle", id);
+                connection.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        a.IdArticle = reader.GetInt32("IdArticle");
+                        a.Name = reader.GetString("Name");
+                        a.Price = (float)reader.GetDouble("Price");
+                        a.Type = reader.GetString("Type");
+                    }
+                }
+            }
+            return a;
+        }
     }
 }

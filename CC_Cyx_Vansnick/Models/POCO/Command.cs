@@ -11,7 +11,7 @@ namespace CC_Cyx_Vansnick.Models.POCO
         private DateTime orderPickUp;
         private int nbrBox;
         private bool paid;
-        private Dictionary<Article, int> articles = new Dictionary<Article, int>();
+        private Dictionary<Article, int> articles;
 
         public Dictionary<Article, int> Articles
         {
@@ -44,7 +44,7 @@ namespace CC_Cyx_Vansnick.Models.POCO
 
         public Command()
         {
-
+            articles = new Dictionary<Article, int>();
         }
 
     }

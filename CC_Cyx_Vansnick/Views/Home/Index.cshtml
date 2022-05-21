@@ -4,21 +4,26 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-
-@{
-
-    foreach (Article a in ViewBag.Article)
-    {
-        <table style="border: 1px solid">
-            <tr>
-                <td> <partial name="_DisplayArticles" model="a" /></td>
-                <td><input type="button" name="name" value="+" /></td>
-            </tr>
-        </table>
-
-    }
-}
 <form asp-controller="Home" asp-action="Index" method="post">
     <select asp-for="ProductType" asp-items="Model.ProductTypes"></select>
     <input type="submit" />
 </form>
+<table style="border: 1px solid; width: 70%; margin:auto;">
+
+    <tr>
+        <th>Nom</th>
+        <th>Prix</th>
+        <th>Type</th>
+        <th>Ajouter au panier</th>
+    </tr>
+    @{
+
+        foreach (Article a in ViewBag.Article)
+        {
+            <partial name="_DisplayArticles" model="a" />
+        }
+    }
+
+    </table>
+   
+
