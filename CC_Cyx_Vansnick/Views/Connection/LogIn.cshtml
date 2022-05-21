@@ -1,0 +1,40 @@
+﻿@using CC_Cyx_Vansnick.Models.POCO;
+@model CC_Cyx_Vansnick.Models.ViewModel.ConnectionViewModel;
+
+<h1>Connexion</h1>
+
+<div>
+    <form method="post" asp-controller="Connection" asp-action="LogIn">
+
+        <table>
+            <tr>
+                <td><label asp-for="Email"></label></td>
+
+                <td><input asp-for="Email" value="Client@Client.com" /></td>
+
+                <td><span asp-validation-for="Email"></span></td>
+
+            </tr>
+            <tr>
+                <td><label asp-for="Password"></label></td>
+
+                <td><input asp-for="Password" value="Client" /></td>
+
+                <td><span asp-validation-for="Password"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Type"></label></td>
+                <td><select asp-for="Type" asp-items="Model.Types"></select></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>@ViewData["ErrorMessage"]</td>
+            </tr>            <tr>
+                <td><input type="submit" /></td>
+                <td></td>
+                <td><a class="nav-link" asp-area="" asp-controller="Inscription" asp-action="Index">Inscritpion</a></td>
+
+            </tr>
+        </table>
+    </form>
+</div>

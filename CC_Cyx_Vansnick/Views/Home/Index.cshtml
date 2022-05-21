@@ -1,0 +1,24 @@
+﻿@using CC_Cyx_Vansnick.Models.POCO;
+@model CC_Cyx_Vansnick.Models.ViewModel.DDLCatViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+
+    foreach (Article a in ViewBag.Article)
+    {
+        <table style="border: 1px solid">
+            <tr>
+                <td> <partial name="_DisplayArticles" model="a" /></td>
+                <td><input type="button" name="name" value="+" /></td>
+            </tr>
+        </table>
+
+    }
+}
+<form asp-controller="Home" asp-action="Index" method="post">
+    <select asp-for="ProductType" asp-items="Model.ProductTypes"></select>
+    <input type="submit" />
+</form>

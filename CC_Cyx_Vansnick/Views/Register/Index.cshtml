@@ -1,0 +1,64 @@
+﻿@model CC_Cyx_Vansnick.Models.ViewModel.RegisterViewModel
+<h1>Register</h1>
+<div>
+    <form method="post" asp-controller="Register" asp-action="Register">
+        <table>
+            <tr>
+                <td><label asp-for="UserName"></label></td>
+                <td><input asp-for="UserName" /></td>
+                <td><span asp-validation-for="UserName"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="FirstName"></label></td>
+                <td><input asp-for="FirstName" /></td>
+                <td><span asp-validation-for="FirstName"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="LastName"></label></td>
+                <td><input asp-for="LastName" /></td>
+                <td><span asp-validation-for="LastName"></span></td>
+            </tr>
+
+            <tr>
+                <td><label asp-for="Email"></label></td>
+                <td><input asp-for="Email" /></td>
+                <td><span asp-validation-for="Email"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="PhoneNumber"></label></td>
+                <td><input asp-for="PhoneNumber" /></td>
+                <td><span asp-validation-for="PhoneNumber"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Street"></label></td>
+                <td><input asp-for="Street" /></td>
+                <td><span asp-validation-for="Street"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Number"></label></td>
+                <td><input asp-for="Number" /></td>
+                <td><span asp-validation-for="Number"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="City"></label></td>
+                <td><input asp-for="City" /></td>
+                <td><span asp-validation-for="City"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Codep"></label></td>
+                <td><input asp-for="Codep" /></td>
+                <td><span asp-validation-for="Codep"></span></td>
+            </tr>
+
+            <tr>
+                <td><label asp-for="Password"></label></td>
+                <td><input asp-for="Password" /></td>
+                <td><span asp-validation-for="Password"></span></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" /></td>
+            </tr>
+        </table>
+    </form>
+</div>

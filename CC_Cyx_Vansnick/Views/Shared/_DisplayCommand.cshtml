@@ -1,0 +1,22 @@
+﻿@model CC_Cyx_Vansnick.Models.POCO.Command
+
+
+<table>
+    @{
+        foreach (var item in Model.Articles)
+        {
+            <tr>
+                <td>
+                        @item.Key.Name  
+                </td>
+                <td>
+                        @item.Key.Price
+                </td>
+                <td>
+                        x @item.Value
+                </td>
+            </tr>
+        }
+    }
+    </table>
+    
